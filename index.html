@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Kinkshoka</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Gloria+Hallelujah&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif; 
+            background-color: #111;
+            color: #fff;
+        }
+        header {
+            background: linear-gradient(90deg, #ff0000, #000);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('') no-repeat center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 4rem;
+            color: #fff;
+            font-family: 'Caveat', cursive; 
+            z-index: 1;
+            position: relative;
+        }
+        header nav {
+            margin-top: 10px;
+            z-index: 1;
+            position: relative;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #ffbbbb;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #fff;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        .gallery img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s;
+        }
+        .gallery img.active {
+            opacity: 1;
+        }
+        .gallery img:hover {
+            cursor: pointer;
+        }
+        .join-us {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .join-us a {
+            text-decoration: none;
+            color: #ff5555;
+            font-size: 1.5rem;
+            border: 2px solid #ff5555;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .join-us a:hover {
+            background-color: #ff5555;
+            color: #111;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kinkshoka</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="price-rate.html">Price Rate</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="payment.html">Payment</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+			<a href="community.html">community</a>
+			<a href="inwardness.html">Inwardness</a>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <a href="gallery.html">
+                <img src="kink4.jpg" alt="Artwork 1" class="active">
+            </a>
+            <a href="gallery.html">
+                <img src="kink2.jpg" alt="Artwork 2">
+            </a>
+            <a href="gallery.html">
+                <img src="kink3.jpg" alt="Artwork 3">
+            </a>
+        </section>
+        
+        <!-- Headline for joining -->
+        <section class="join-us">
+            <a href="https://www.facebook.com/kink.chomphunut?rdid=EYZJsjqLoSatGRRZ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BsXABUxte" target="_blank">ติดต่องาน&nbsp;</a> 
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 Kinkshoka. All rights reserved.
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.gallery img');
+        let current = 0;
+
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 60000);
+    </script>
+</body>
+</html>

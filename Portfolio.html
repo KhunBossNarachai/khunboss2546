@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff0000, #000);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        header h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffbbbb;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        nav a:active {
+            color: #ff5252;
+        }
+
+        .portfolio-section {
+            margin: 20px 0;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.5);
+        }
+
+        .portfolio-section h2 {
+            color: #ff5252;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background-color: #121212;
+            border: 2px solid #ff5252;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(255, 0, 0, 0.6);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .portfolio-item .description {
+            padding: 10px;
+            color: #fff;
+        }
+
+        .large-image-section {
+            margin: 40px 0;
+            text-align: center;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(255, 0, 0, 0.5);
+        }
+
+        .large-image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ff5252;
+            transition: transform 0.3s;
+        }
+
+        .large-image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-button {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .gallery-button a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #fff;
+            background: linear-gradient(90deg, #ff0000, #000);
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+        }
+
+        .gallery-button a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(255, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portfolio</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="Price rate.html">Price rate</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="Payment.html">Payment</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="Contact.html">Contact</a>
+        <a href="community.html">Community</a>
+        <a href="inwardness.html">Inwardness</a>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="portfolio-section">
+        <h2>ผลงานของฉัน</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="top1.JPG" alt="ผลงานที่ 1">
+                <div class="description">ชื่อผลงานที่ 1</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="top4.JPG" alt="ผลงานที่ 2">
+                <div class="description">ชื่อผลงานที่ 2</div>
+            </div>
+            <div class="portfolio-item">
+                <img src="top3.JPG" alt="ผลงานที่ 3">
+                <div class="description">ชื่อผลงานที่ 3</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="large-image-section">
+        <h2>ผลงานชิ้นพิเศษ</h2>
+        <img src="top2.jpg" alt="ผลงานชิ้นพิเศษ">
+        <p>&nbsp;</p>
+    </section>
+
+    <div class="gallery-button">
+        <a href="gallery.html">ดูผลงานทั้งหมดใน Gallery</a>
+    </div>
+</div>
+
+</body>
+</html>
